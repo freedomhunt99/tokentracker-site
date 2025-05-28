@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="">
+  <!-- AOS CSS (в head) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -39,19 +40,21 @@
 
   </header>
 
-  <section id="hero" class="hero ">
+  <section id="hero" class="hero">
     <div class="container">
       <div class="hero__content row align-items-center">
-        <div class="hero__text col-md-6">
-          <h1 class="hero__title">
+
+        <div class="hero__text col-md-6" data-aos="fade-right">
+          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
             TokenTracker <span class="hero__highlight">— разведка</span><br>
             по твоему токену
           </h1>
-          <p class="hero__subtext">
+          <p class="hero__subtext" data-aos="fade-up" data-aos-delay="200">
             Следи за действиями девелопера, китов и холдеров. Настраивай алерты, анализируй балансы, получай инсайды
             раньше всех.
           </p>
-          <div class="hero__stats d-flex gap-4 mt-4">
+
+          <div class="hero__stats d-flex gap-4 mt-4" data-aos="fade-up" data-aos-delay="300">
             <div class="hero__stat">
               <h4 class="mb-0">12,452</h4>
               <small class="text-muted">Скачали сегодня</small>
@@ -62,49 +65,65 @@
             </div>
           </div>
 
-          <div class="hero__buttons mt-4">
+          <div class="hero__buttons mt-4" data-aos="fade-up" data-aos-delay="400">
             <a href="#download-option" class="hero__btn btn btn-primary">Скачать <b>TokenTracker</b></a>
             <a href="#audience-clean" class="hero__btn btn btn-outline">Подробнее</a>
           </div>
         </div>
-        <div class="hero__image col-md-6 text-center mt-5 mt-md-0">
+
+        <div class="hero__image col-md-6 text-center mt-5 mt-md-0" data-aos="zoom-in" data-aos-delay="300">
           <img src="assets/img/illustration1-1.png" alt="Logo" class="hero__logo">
         </div>
+
       </div>
     </div>
-    <div class="scroll-down">
+
+    <div class="scroll-down" data-aos="fade-up" data-aos-delay="500">
       <a href="#audience-clean" class="arrow">
-        <i class="bi bi-chevron-down "></i>
+        <i class="bi bi-chevron-down"></i>
       </a>
     </div>
   </section>
 
-  <section class="trusted-by py-5 ">
-    <div class="container text-center">
-      <h5 class="fw-bold trusted-by__title fs-2 text-dark mb-5">Уже доверяют <span class="hero__highlight">10,000+
-        </span> людей</h5>
+  <section class="trusted-by py-5">
+    <div class="container text-center" data-aos="fade-up">
+      <h5 class="fw-bold trusted-by__title fs-2 text-dark mb-5">
+        Уже доверяют <span class="hero__highlight">10,000+</span> людей
+      </h5>
       <div class="trusted-by__logos d-flex flex-wrap justify-content-center align-items-center gap-4">
-        <img src="https://ext.same-assets.com/3376817193/3947023141.svg" alt="Binance">
-        <img src="https://ext.same-assets.com/3376817193/3604335372.svg" alt="OKX">
-        <img src="https://ext.same-assets.com/3376817193/4285010279.svg" alt="Bybit">
-        <img src="https://ext.same-assets.com/3376817193/1015902934.svg" alt="KuCoin">
-        <img src="https://ext.same-assets.com/3376817193/2826576140.svg" alt="Gate.io">
-        <img src="https://ext.same-assets.com/3376817193/2471386239.svg" alt="Kraken">
+        <img src="https://ext.same-assets.com/3376817193/3947023141.svg" alt="Binance" data-aos="fade-up"
+          data-aos-delay="100">
+        <img src="https://ext.same-assets.com/3376817193/3604335372.svg" alt="OKX" data-aos="fade-up"
+          data-aos-delay="200">
+        <img src="https://ext.same-assets.com/3376817193/4285010279.svg" alt="Bybit" data-aos="fade-up"
+          data-aos-delay="300">
+        <img src="https://ext.same-assets.com/3376817193/1015902934.svg" alt="KuCoin" data-aos="fade-up"
+          data-aos-delay="400">
+        <img src="https://ext.same-assets.com/3376817193/2826576140.svg" alt="Gate.io" data-aos="fade-up"
+          data-aos-delay="500">
+        <img src="https://ext.same-assets.com/3376817193/2471386239.svg" alt="Kraken" data-aos="fade-up"
+          data-aos-delay="600">
       </div>
     </div>
   </section>
 
+
   <section id="audience-clean" class="audience-clean">
     <div class="container d-flex flex-wrap justify-content-between align-items-start">
+
+      <!-- Ліва частина -->
       <div class="audience-clean__left">
-        <h2>Кому подходит<br>TokenTracker</h2>
-        <p>
-          Наша платформа создана для разных целей: от раннего входа до глубокого анализа блокчейн-данных. Независимо от
-          вашей роли, вы найдете инструменты, которые принесут преимущество.
+        <h2 data-aos="fade-up" data-aos-delay="0">Кому подходит<br>TokenTracker</h2>
+        <p data-aos="fade-up" data-aos-delay="150">
+          Наша платформа создана для разных целей: от раннего входа до глубокого анализа блокчейн-данных.
+          Независимо от вашей роли, вы найдете инструменты, которые принесут преимущество.
         </p>
       </div>
+
+      <!-- Права частина: 3 блоки -->
       <div class="audience-clean__right">
-        <div class="audience-clean__item">
+
+        <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="200">
           <div class="audience-clean__icon">
             <i class="bi bi-briefcase-fill"></i>
           </div>
@@ -113,7 +132,8 @@
             <p>Следят за инсайдерами и заходят раньше рынка</p>
           </div>
         </div>
-        <div class="audience-clean__item">
+
+        <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="300">
           <div class="audience-clean__icon">
             <i class="bi bi-bar-chart-line-fill"></i>
           </div>
@@ -122,7 +142,8 @@
             <p>Используют сигналы от движения китов</p>
           </div>
         </div>
-        <div class="audience-clean__item">
+
+        <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="400">
           <div class="audience-clean__icon">
             <i class="bi bi-search"></i>
           </div>
@@ -131,104 +152,120 @@
             <p>Погружаются в поведение адресов в сети</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section id="features" class="features section ">
+
+  <section id="features" class="features section">
     <div class="container">
+
+      <!-- Заголовок -->
       <div class="features__header text-center mb-5">
-        <h2 class="features__title">Что умеет <span class="hero__highlight">TokenTracker</span></h2>
-        <p class="features__subtitle text-muted">Инструменты для настоящей цифровой разведки</p>
+        <h2 class="features__title" data-aos="fade-up" data-aos-delay="0">
+          Что умеет <span class="hero__highlight">TokenTracker</span>
+        </h2>
+        <p class="features__subtitle text-muted" data-aos="fade-up" data-aos-delay="150">
+          Инструменты для настоящей цифровой разведки
+        </p>
       </div>
+
+      <!-- Грід -->
       <div class="features__grid row text-center">
-        <div class="col-md-4 mb-4">
+
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="features__item">
             <img src="assets/img/illustration2.png" alt="Киты" class="features__image">
             <h5 class="features__name">Анализ китов</h5>
             <p class="features__desc">Трек больших кошельков. Входы, выходы, накопления.</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="features__item">
             <img src="assets/img/illustration3.png" alt="Разработчик" class="features__image">
             <h5 class="features__name">Мониторинг девелопера</h5>
             <p class="features__desc">Проверка контрактов, свапов, действий разработчика.</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div class="features__item">
             <img src="assets/img/illustration4.png" alt="Баланс" class="features__image">
             <h5 class="features__name">Разведка по балансу</h5>
             <p class="features__desc">Движения холдеров, рост/падение, аномалии.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
+
   <section id="how-it-works" class="how-it-works py-5">
     <div class="container">
-      <h2 class="text-center fw-bold text-white mb-5">Как работает <span class="hero__highlight">TokenTracker</span>?
+      <h2 class="text-center fw-bold text-white mb-5" data-aos="fade-up">
+        Как работает <span class="hero__highlight">TokenTracker</span>?
       </h2>
 
       <!-- Step 1 -->
       <div class="row align-items-center mt-5 mb-5">
         <div class="col-md-6">
-          <h3 class="how-title fs-2 fw-bold">1. Вводишь адрес токена</h3>
-          <p class="how-text">Или выбираешь из популярных — всё быстро и просто.</p>
+          <h3 class="how-title fs-2 fw-bold" data-aos="fade-right" data-aos-delay="100">1. Вводишь адрес токена</h3>
+          <p class="how-text" data-aos="fade-right" data-aos-delay="200">Или выбираешь из популярных — всё быстро и
+            просто.</p>
 
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <div class="token-icon">
+            <div class="token-icon" data-aos="zoom-in" data-aos-delay="300">
               <img src="assets/img/crypto/usdt.png" alt="USDT" class="img-token">
             </div>
-            <div class="token-icon">
+            <div class="token-icon" data-aos="zoom-in" data-aos-delay="400">
               <img src="assets/img/crypto/etherium.png" alt="ETH" class="img-token">
             </div>
-            <div class="token-icon">
+            <div class="token-icon" data-aos="zoom-in" data-aos-delay="500">
               <img src="assets/img/crypto/solana.png" alt="SOL" class="img-token">
             </div>
-            <div class="token-icon">
+            <div class="token-icon" data-aos="zoom-in" data-aos-delay="600">
               <img src="assets/img/crypto/ton.png" alt="TON" class="img-token">
             </div>
-            <div class="token-icon">
+            <div class="token-icon" data-aos="zoom-in" data-aos-delay="700">
               <img src="assets/img/crypto/shiba.png" alt="SHIBA" class="img-token">
             </div>
           </div>
-
         </div>
-        <div class="col-md-6 text-center">
+
+        <div class="col-md-6 text-center" data-aos="fade-left" data-aos-delay="300">
           <img src="assets/img/step1.png" alt="Step 1" class="img-fluid rounded-4">
         </div>
       </div>
 
-
       <!-- Step 2 -->
       <div class="row align-items-center mb-5">
         <div class="col-md-6 order-md-2">
-          <h3 class="how-title fs-2 fw-bold">2. Получаешь дашборд</h3>
-          <p class="how-text">В реальном времени видишь всё самое важное:</p>
+          <h3 class="how-title fs-2 fw-bold" data-aos="fade-left" data-aos-delay="100">2. Получаешь дашборд</h3>
+          <p class="how-text" data-aos="fade-left" data-aos-delay="200">В реальном времени видишь всё самое важное:</p>
           <div class="features-list mt-4">
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-left" data-aos-delay="300">
               <span class="me-2 text-success">▸</span>
               <span class="text-white-50">Крупные кошельки (киты)</span>
             </div>
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-left" data-aos-delay="400">
               <span class="me-2 text-success">▸</span>
               <span class="text-white-50">Последние транзакции</span>
             </div>
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-left" data-aos-delay="500">
               <span class="me-2 text-success">▸</span>
               <span class="text-white-50">Баланс по токенам</span>
             </div>
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-left" data-aos-delay="600">
               <span class="me-2 text-success">▸</span>
               <span class="text-white-50">Активность разработчиков</span>
             </div>
           </div>
-
         </div>
-        <div class="col-md-6 order-md-1 text-center">
+
+        <div class="col-md-6 order-md-1 text-center" data-aos="fade-right" data-aos-delay="300">
           <img src="assets/img/step2.png" alt="Step 2" class="img-fluid rounded-4">
         </div>
       </div>
@@ -236,45 +273,47 @@
       <!-- Step 3 -->
       <div class="row align-items-center mb-5">
         <div class="col-md-6">
-          <h3 class="how-title fs-2 fw-bold">3. Настраиваешь алерты</h3>
-          <p class="how-text">Не пропускай важные события — настрой уведомления:</p>
+          <h3 class="how-title fs-2 fw-bold" data-aos="fade-right" data-aos-delay="100">3. Настраиваешь алерты</h3>
+          <p class="how-text" data-aos="fade-right" data-aos-delay="200">Не пропускай важные события — настрой
+            уведомления:</p>
           <div class="features-list mt-4">
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-right" data-aos-delay="300">
               <span class="me-2 text-warning">▸</span>
               <span class="text-white-50">Киты закупаются</span>
             </div>
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-right" data-aos-delay="400">
               <span class="me-2 text-warning">▸</span>
               <span class="text-white-50">Выводы с бирж</span>
             </div>
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-right" data-aos-delay="500">
               <span class="me-2 text-warning">▸</span>
               <span class="text-white-50">Подозрительная активность</span>
             </div>
-            <div class="feature-item d-flex align-items-start mb-2">
+            <div class="feature-item d-flex align-items-start mb-2" data-aos="fade-right" data-aos-delay="600">
               <span class="me-2 text-warning">▸</span>
               <span class="text-white-50">Рост/падение баланса</span>
             </div>
           </div>
-
         </div>
-        <div class="col-md-6 text-center">
+
+        <div class="col-md-6 text-center" data-aos="fade-left" data-aos-delay="300">
           <img src="assets/img/step3.png" alt="Step 3" class="img-fluid rounded-4">
         </div>
       </div>
     </div>
   </section>
 
+
   <section id="result-stats" class="section results-stats py-5">
     <div class="container text-center">
-      <h2 class="text-white fw-bold mb-3">Реальные результаты пользователей</h2>
-      <p class="text-white-50 mb-5">
+      <h2 class="text-white fw-bold mb-3" data-aos="fade-up">Реальные результаты пользователей</h2>
+      <p class="text-white-50 mb-5" data-aos="fade-up" data-aos-delay="100">
         Как монеты отслеживаются через <span class="text-accent">TokenTracker</span>
       </p>
 
       <div class="row g-4 justify-content-center">
         <!-- Ethereum -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="200">
           <div class="result-card h-100">
             <div class="exchange-label text-accent">Ethereum (ETH)</div>
             <div class="period-label text-white-50">За сегодня</div>
@@ -287,7 +326,7 @@
         </div>
 
         <!-- Bitcoin -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="400">
           <div class="result-card h-100">
             <div class="exchange-label text-accent">Bitcoin (BTC)</div>
             <div class="period-label text-white-50">За неделю</div>
@@ -300,7 +339,7 @@
         </div>
 
         <!-- TON -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="600">
           <div class="result-card h-100">
             <div class="exchange-label text-accent">Toncoin (TON)</div>
             <div class="period-label text-white-50">За месяц</div>
@@ -315,13 +354,15 @@
     </div>
   </section>
 
+
   <section class="section testimonials-slider py-5">
     <div class="container text-center">
-      <h2 class="text-white fw-bold mb-3">Что говорят пользователи</h2>
-      <p class="text-white-50 mb-4">Отзывы трейдеров, которые уже пользуются <span
-          class="text-accent">TokenTracker</span></p>
+      <h2 class="text-white fw-bold mb-3" data-aos="fade-up" data-aos-delay="100">Что говорят пользователи</h2>
+      <p class="text-white-50 mb-4" data-aos="fade-up" data-aos-delay="200">
+        Отзывы трейдеров, которые уже пользуются <span class="text-accent">TokenTracker</span>
+      </p>
 
-      <div class="swiper testimonialsSwiper">
+      <div class="swiper testimonialsSwiper" data-aos="zoom-in" data-aos-delay="300">
         <div class="swiper-wrapper">
           <!-- Відгук 1 -->
           <div class="swiper-slide">
@@ -409,10 +450,8 @@
               <div class="text-success fw-semibold">Прибыль: +$119</div>
             </div>
           </div>
-
-
-
         </div>
+
         <!-- Навігація -->
         <div class="swiper-pagination mt-4"></div>
       </div>
@@ -422,19 +461,20 @@
 
 
 
+
   <section class="screenshots py-5">
     <div class="container">
-      <h2 class="text-center fw-bold text-white mb-5">Как это выглядит</h2>
+      <h2 class="text-center fw-bold text-white mb-5" data-aos="fade-up" data-aos-delay="100">Как это выглядит</h2>
       <div class="row text-center g-4">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="200">
           <img src="assets/img/report.png" alt="Отчёт" class="img-fluid rounded-4 shadow">
           <p class="text-white-50 mt-2">Вот как выглядит отчёт</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="300">
           <img src="assets/img/report2.png" alt="Адреса" class="img-fluid rounded-4 shadow">
           <p class="text-white-50 mt-2">Визуализация адресов</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="400">
           <img src="assets/img/report3.png" alt="Алерты" class="img-fluid rounded-4 shadow">
           <p class="text-white-50 mt-2">Алерты по движению</p>
         </div>
@@ -442,36 +482,46 @@
     </div>
   </section>
 
+
   <section class="security-ui py-5">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h2 class="security-ui__title">Безопасность и анонимность</h2>
-          <p class="security-ui__text">
+          <h2 class="security-ui__title" data-aos="fade-up" data-aos-delay="100">Безопасность и анонимность</h2>
+          <p class="security-ui__text" data-aos="fade-up" data-aos-delay="200">
             Приложение работает напрямую на твоем устройстве.<br>
             Все операции выполняются локально — без облаков и сторонних сервисов.
           </p>
           <ul class="security-ui__list">
-            <li><i class="bi bi-cpu me-2"></i>Обработка данных локально, без подключения к серверам</li>
-            <li><i class="bi bi-slash-circle me-2"></i>Никакой регистрации, аккаунтов и логирования</li>
-            <li><i class="bi bi-shield-lock me-2"></i>Максимальная изоляция и конфиденциальность</li>
+            <li data-aos="fade-left" data-aos-delay="300"><i class="bi bi-cpu me-2"></i>Обработка данных локально, без
+              подключения к серверам</li>
+            <li data-aos="fade-left" data-aos-delay="400"><i class="bi bi-slash-circle me-2"></i>Никакой регистрации,
+              аккаунтов и логирования</li>
+            <li data-aos="fade-left" data-aos-delay="500"><i class="bi bi-shield-lock me-2"></i>Максимальная изоляция и
+              конфиденциальность</li>
           </ul>
         </div>
         <div class="col-lg-5 text-center">
-          <img src="assets/img/privacy-ui.png" alt="Локальная обработка UI" class="img-fluid security-ui__image">
+          <img src="assets/img/privacy-ui.png" alt="Локальная обработка UI" class="img-fluid security-ui__image"
+            data-aos="zoom-in" data-aos-delay="400">
         </div>
       </div>
     </div>
   </section>
 
+
   <section id="download-option" class="section download-options py-5">
     <div class="container">
-      <h2 class="text-center fw-bold mb-4 text-white">Скачать <span class="hero__highlight">TokenTracker</span></h2>
-      <p class="text-center text-white-50 mb-5">Выберите нужный формат</p>
+      <h2 class="text-center fw-bold mb-4 text-white" data-aos="fade-up" data-aos-delay="100">
+        Скачать <span class="hero__highlight">TokenTracker</span>
+      </h2>
+      <p class="text-center text-white-50 mb-5" data-aos="fade-up" data-aos-delay="200">
+        Выберите нужный формат
+      </p>
 
       <div class="row g-4 justify-content-center">
         <!-- EXE -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="download-card">
             <img src="assets/img/exe.png" alt="Windows" class="mb-3" width="40">
             <h5 class="text-white fw-semibold">Установщик</h5>
@@ -485,7 +535,7 @@
         </div>
 
         <!-- ZIP -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
           <div class="download-card position-relative recommended">
             <span class="recommended-label">Рекомендуется</span>
             <img src="assets/img/zip.png" alt="ZIP" class="mb-3" width="40">
@@ -500,7 +550,7 @@
         </div>
 
         <!-- PDF -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
           <div class="download-card">
             <img src="assets/img/pdf.png" alt="PDF" class="mb-3" width="40">
             <h5 class="text-white fw-semibold">PDF Инструкция</h5>
@@ -516,15 +566,19 @@
     </div>
   </section>
 
+
   <section class="section faq-block py-5">
     <div class="container">
-      <h2 class="text-white fw-bold text-center mb-4">Часто задаваемые вопросы</h2>
-      <p class="text-white-50 text-center mb-5">Ответы на популярные вопросы по работе <span
-          class="text-accent">TokenTracker</span></p>
+      <h2 class="text-white fw-bold text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+        Часто задаваемые вопросы
+      </h2>
+      <p class="text-white-50 text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+        Ответы на популярные вопросы по работе <span class="text-accent">TokenTracker</span>
+      </p>
 
       <div class="accordion accordion-flush" id="faqAccordion">
         <!-- Q1 -->
-        <div class="accordion-item bg-transparent  border-secondary">
+        <div class="accordion-item bg-transparent border-secondary" data-aos="fade-up" data-aos-delay="300">
           <h2 class="accordion-header" id="faq1">
             <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse"
               data-bs-target="#faqCollapse1">
@@ -539,7 +593,7 @@
         </div>
 
         <!-- Q2 -->
-        <div class="accordion-item bg-transparent border-secondary">
+        <div class="accordion-item bg-transparent border-secondary" data-aos="fade-up" data-aos-delay="400">
           <h2 class="accordion-header" id="faq2">
             <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse"
               data-bs-target="#faqCollapse2">
@@ -554,7 +608,7 @@
         </div>
 
         <!-- Q3 -->
-        <div class="accordion-item bg-transparent border-secondary">
+        <div class="accordion-item bg-transparent border-secondary" data-aos="fade-up" data-aos-delay="500">
           <h2 class="accordion-header" id="faq3">
             <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse"
               data-bs-target="#faqCollapse3">
@@ -569,7 +623,7 @@
         </div>
 
         <!-- Q4 -->
-        <div class="accordion-item bg-transparent border-secondary">
+        <div class="accordion-item bg-transparent border-secondary" data-aos="fade-up" data-aos-delay="600">
           <h2 class="accordion-header" id="faq4">
             <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse"
               data-bs-target="#faqCollapse4">
@@ -584,7 +638,7 @@
         </div>
 
         <!-- Q5 -->
-        <div class="accordion-item bg-transparent border-secondary">
+        <div class="accordion-item bg-transparent border-secondary" data-aos="fade-up" data-aos-delay="700">
           <h2 class="accordion-header" id="faq5">
             <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse"
               data-bs-target="#faqCollapse5">
@@ -601,13 +655,15 @@
     </div>
   </section>
 
+
   <footer class="footer py-5">
     <div class="container">
       <div class="row justify-content-between align-items-start">
         <!-- Бренд -->
         <div class="col-md-4 mb-4 mb-md-0">
-          <img src="assets/img/logo.png" alt="TokenTracker Logo" class="footer__logo mb-2" height="32">
-          <p class="text-white-50 small mb-0">
+          <img src="assets/img/logo.png" alt="TokenTracker Logo" class="footer__logo mb-2" height="32"
+            data-aos="fade-right" data-aos-delay="100">
+          <p class="text-white-50 small mb-0" data-aos="fade-right" data-aos-delay="200">
             Локальная крипто-разведка. Следи за китами, баланcами и действиями девелоперов в реальном времени.
           </p>
         </div>
@@ -615,19 +671,22 @@
         <!-- Навігація -->
         <div class="col-md-7 d-flex justify-content-between flex-wrap">
           <div>
-            <h6 class="text-white fw-semibold mb-3">Продукт</h6>
+            <h6 class="text-white fw-semibold mb-3" data-aos="fade-up" data-aos-delay="0">Продукт</h6>
             <ul class="list-unstyled">
-              <li><a href="#hero" class="footer-link">Начать</a></li>
-              <li><a href="#features" class="footer-link">Функции</a></li>
-              <li><a href="#how-it-works" class="footer-link">Как это работает?</a></li>
+              <li data-aos="fade-up" data-aos-delay="100"><a href="#hero" class="footer-link">Начать</a></li>
+              <li data-aos="fade-up" data-aos-delay="200"><a href="#features" class="footer-link">Функции</a></li>
+              <li data-aos="fade-up" data-aos-delay="300"><a href="#how-it-works" class="footer-link">Как это
+                  работает?</a></li>
             </ul>
           </div>
           <div>
-            <h6 class="text-white fw-semibold mb-3">Поддержка</h6>
+            <h6 class="text-white fw-semibold mb-3" data-aos="fade-up" data-aos-delay="0">Поддержка</h6>
             <ul class="list-unstyled">
-              <li><a href="#result-stats" class="footer-link">Результаты</a></li>
-              <li><a href="#faq" class="footer-link">FAQ</a></li>
-              <li><a href="#download-option" class="footer-link">Скачать</a></li>
+              <li data-aos="fade-up" data-aos-delay="100"><a href="#result-stats" class="footer-link">Результаты</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="200"><a href="#faq" class="footer-link">FAQ</a></li>
+              <li data-aos="fade-up" data-aos-delay="300"><a href="#download-option" class="footer-link">Скачать</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -645,12 +704,20 @@
 
 
 
+  <div class="download-alerts-wrapper" id="download-alerts"></div>
+
   <!-- Перед </body> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    AOS.init({
+      once: false, // анімація тільки один раз
+      duration: 800, // тривалість
+      easing: 'ease-in-out',
+    });
+    //слайдер відгуків
     const swiper = new Swiper(".testimonialsSwiper", {
       loop: true,
       spaceBetween: 30,
@@ -669,6 +736,7 @@
       // ❌ без pagination
     });
 
+    //счетчик онлайна(рандом)
     const onlineEl = document.getElementById('online-count');
     let currentOnline = 378;
 
@@ -684,7 +752,51 @@
       }, 300);
     }
 
-    setInterval(updateOnlineCount, 3000); 
+    setInterval(updateOnlineCount, 3000);
+
+    //alert
+    const alerts = [
+      { username: '@flashmax', profit: 212 },
+      { username: '@bitlord23', profit: 134 },
+      { username: '@ethmamba', profit: 88 },
+      { username: '@walletwave', profit: 190 },
+      { username: '@hodlqueen', profit: 146 },
+      { username: '@signaldrip', profit: 267 },
+      { username: '@pumpking', profit: 73 },
+      { username: '@darkentry', profit: 301 },
+      { username: '@moonrider', profit: 412 },
+      { username: '@tonvision', profit: 198 },
+      { username: '@gridseer', profit: 174 },
+      { username: '@alphaape', profit: 259 },
+      { username: '@rektwolf', profit: 93 },
+      { username: '@tokenhawk', profit: 121 },
+      { username: '@dappghost', profit: 245 },
+      { username: '@apeoracle', profit: 176 },
+      { username: '@whalescan', profit: 389 },
+      { username: '@gaswatch', profit: 152 },
+      { username: '@xzninja', profit: 318 },
+      { username: '@zeroalpha', profit: 204 }
+    ];
+
+
+
+    function showDownloadAlert(user) {
+      const wrapper = document.getElementById('download-alerts');
+      const alert = document.createElement('div');
+      alert.classList.add('download-alert');
+      alert.innerHTML = `<span class="dot"></span> ${user.username} заработал <b>$${user.profit}</b> с помощью TokenTracker`;
+      wrapper.appendChild(alert);
+
+      setTimeout(() => {
+        alert.remove();
+      }, 7000);
+    }
+
+    // Інтервал авто-виводу
+    setInterval(() => {
+      const random = alerts[Math.floor(Math.random() * alerts.length)];
+      showDownloadAlert(random);
+    }, 8000); // кожні 8 секунд
   </script>
 
 </body>
