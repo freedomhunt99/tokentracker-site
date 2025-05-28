@@ -18,34 +18,60 @@
 </head>
 
 <body>
+  <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title">Меню</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-3 px-4">
+      <a href="#start" class="header__link nav-link text-white" data-bs-dismiss="offcanvas">Начать</a>
+      <a href="#features" class="header__link nav-link text-white" data-bs-dismiss="offcanvas">Функции</a>
+      <a href="#how-it-works" class="header__link nav-link text-white" data-bs-dismiss="offcanvas">Как это работает
+        ?</a>
+      <a href="#result-stats" class="header__link nav-link text-white" data-bs-dismiss="offcanvas">Результаты
+        пользователей</a>
+      <hr class="text-white-50">
+      <a href="#download-option" class="header__cta btn btn-success w-100" data-bs-dismiss="offcanvas">Начать
+        мониторинг</a>
+    </div>
+  </div>
 
   <header class="header">
     <div class="container">
-      <div class="row ">
-        <div class="col-12">
-          <div class="header__container d-flex justify-content-between align-items-center py-3 px-4">
-            <div class="header__logo-wrapper d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="TokenTracker Logo" class="header__logo">
-            </div>
-            <nav class="header__nav d-none d-md-flex gap-4">
-              <a href="#start" class="header__link nav-link">Начать</a>
-              <a href="#features" class="header__link nav-link">Функции</a>
-              <a href="#how-it-works" class="header__link nav-link">Как это работает ?</a>
-              <a href="#result-stats" class="header__link nav-link">Результаты пользователей</a>
-            </nav>
-            <a href="#download-option" class="header__cta btn btn-primary btn-sm">Начать мониторинг</a>
+      <div class="row align-items-center py-3">
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="header__logo-wrapper d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="TokenTracker Logo" class="header__logo">
           </div>
         </div>
-      </div>
 
+        <div class="col-md-6 col-lg-7 d-none d-lg-flex justify-content-center">
+          <nav class="header__nav d-flex gap-4">
+            <a href="#start" class="header__link nav-link">Начать</a>
+            <a href="#features" class="header__link nav-link">Функции</a>
+            <a href="#how-it-works" class="header__link nav-link">Как это работает ?</a>
+            <a href="#result-stats" class="header__link nav-link">Результаты пользователей</a>
+          </nav>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-5 d-sm-flex justify-content-end text-end d-none d-md-block ms-auto">
+          <a href="#download-option" class="header__cta btn btn-primary btn-sm">Начать мониторинг</a>
+        </div>
+        <div class="col-2 col-lg-3 ms-auto d-lg-none d-flex justify-content-end">
+          <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu">
+            <i class="bi bi-list" style="font-size: 1.8rem;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
   <section id="hero" class="hero">
     <div class="container">
-      <div class="hero__content row align-items-center">
+      <div class="hero__content row align-items-center parallax" data-speed="3">
 
-        <div class="hero__text col-md-6" data-aos="fade-right">
-          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+        <div class="hero__text col-lg-6 order-lg-1 order-2 mb-lg-none mb-5" data-aos="fade-right">
+          <h1 class="hero__title" data-aos="fade-up " data-aos-delay="100">
             TokenTracker <span class="hero__highlight">— разведка</span><br>
             по твоему токену
           </h1>
@@ -56,7 +82,7 @@
 
           <div class="hero__stats d-flex gap-4 mt-4" data-aos="fade-up" data-aos-delay="300">
             <div class="hero__stat">
-              <h4 class="mb-0">12,452</h4>
+              <h4 class="mb-0 count-up" data-count="12,452">12,452</h4>
               <small class="text-muted">Скачали сегодня</small>
             </div>
             <div class="hero__stat">
@@ -71,8 +97,9 @@
           </div>
         </div>
 
-        <div class="hero__image col-md-6 text-center mt-5 mt-md-0" data-aos="zoom-in" data-aos-delay="300">
-          <img src="assets/img/illustration1-1.png" alt="Logo" class="hero__logo">
+        <div class="hero__image col-lg-6 order-lg-2 order-1 text-center mt-5 mb-5 mt-lg-0" data-aos="zoom-in"
+          data-aos-delay="300">
+          <img src="assets/img/illustration1-1.png" alt="Logo" class="hero__logo ">
         </div>
 
       </div>
@@ -109,48 +136,53 @@
 
 
   <section id="audience-clean" class="audience-clean">
-    <div class="container d-flex flex-wrap justify-content-between align-items-start">
+    <div class="container">
+      <div class="row align-items-start">
 
-      <!-- Ліва частина -->
-      <div class="audience-clean__left">
-        <h2 data-aos="fade-up" data-aos-delay="0">Кому подходит<br>TokenTracker</h2>
-        <p data-aos="fade-up" data-aos-delay="150">
-          Наша платформа создана для разных целей: от раннего входа до глубокого анализа блокчейн-данных.
-          Независимо от вашей роли, вы найдете инструменты, которые принесут преимущество.
-        </p>
-      </div>
-
-      <!-- Права частина: 3 блоки -->
-      <div class="audience-clean__right">
-
-        <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="200">
-          <div class="audience-clean__icon">
-            <i class="bi bi-briefcase-fill"></i>
-          </div>
-          <div class="audience-clean__text">
-            <h5>Инвесторы</h5>
-            <p>Следят за инсайдерами и заходят раньше рынка</p>
-          </div>
+        <!-- Ліва частина -->
+        <div class="audience-clean__left col-12 col-lg-6 mb-4 mb-lg-0">
+          <h2 data-aos="fade-up" data-aos-delay="0" class=" mb-3">Кому подходит<br><span
+              class="hero__highlight">TokenTracker</span>
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="150">
+            Наша платформа создана для разных целей: от раннего входа до глубокого анализа блокчейн-данных.
+            Независимо от вашей роли, вы найдете инструменты, которые принесут преимущество.
+          </p>
         </div>
 
-        <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="300">
-          <div class="audience-clean__icon">
-            <i class="bi bi-bar-chart-line-fill"></i>
-          </div>
-          <div class="audience-clean__text">
-            <h5>Трейдеры</h5>
-            <p>Используют сигналы от движения китов</p>
-          </div>
-        </div>
+        <!-- Права частина -->
+        <div class="audience-clean__right col-12 col-lg-6 d-flex flex-column gap-3">
 
-        <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="400">
-          <div class="audience-clean__icon">
-            <i class="bi bi-search"></i>
+          <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="200">
+            <div class="audience-clean__icon">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+            <div class="audience-clean__text">
+              <h5>Инвесторы</h5>
+              <p>Следят за инсайдерами и заходят раньше рынка</p>
+            </div>
           </div>
-          <div class="audience-clean__text">
-            <h5>Аналитики</h5>
-            <p>Погружаются в поведение адресов в сети</p>
+
+          <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="300">
+            <div class="audience-clean__icon">
+              <i class="bi bi-bar-chart-line-fill"></i>
+            </div>
+            <div class="audience-clean__text">
+              <h5>Трейдеры</h5>
+              <p>Используют сигналы от движения китов</p>
+            </div>
           </div>
+
+          <div class="audience-clean__item" data-aos="fade-up" data-aos-delay="400">
+            <div class="audience-clean__icon">
+              <i class="bi bi-search"></i>
+            </div>
+            <div class="audience-clean__text">
+              <h5>Аналитики</h5>
+              <p>Погружаются в поведение адресов в сети</p>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -211,11 +243,10 @@
 
       <!-- Step 1 -->
       <div class="row align-items-center mt-5 mb-5">
-        <div class="col-md-6">
+        <div class="col-12 col-md-6">
           <h3 class="how-title fs-2 fw-bold" data-aos="fade-right" data-aos-delay="100">1. Вводишь адрес токена</h3>
           <p class="how-text" data-aos="fade-right" data-aos-delay="200">Или выбираешь из популярных — всё быстро и
             просто.</p>
-
           <div class="d-flex flex-wrap gap-3 mt-4">
             <div class="token-icon" data-aos="zoom-in" data-aos-delay="300">
               <img src="assets/img/crypto/usdt.png" alt="USDT" class="img-token">
@@ -234,15 +265,14 @@
             </div>
           </div>
         </div>
-
-        <div class="col-md-6 text-center" data-aos="fade-left" data-aos-delay="300">
+        <div class="col-12 col-md-6 text-center mt-4 mt-md-0" data-aos="fade-left" data-aos-delay="300">
           <img src="assets/img/step1.png" alt="Step 1" class="img-fluid rounded-4">
         </div>
       </div>
 
       <!-- Step 2 -->
       <div class="row align-items-center mb-5">
-        <div class="col-md-6 order-md-2">
+        <div class="col-12 col-md-6 order-md-2">
           <h3 class="how-title fs-2 fw-bold" data-aos="fade-left" data-aos-delay="100">2. Получаешь дашборд</h3>
           <p class="how-text" data-aos="fade-left" data-aos-delay="200">В реальном времени видишь всё самое важное:</p>
           <div class="features-list mt-4">
@@ -264,15 +294,14 @@
             </div>
           </div>
         </div>
-
-        <div class="col-md-6 order-md-1 text-center" data-aos="fade-right" data-aos-delay="300">
+        <div class="col-12 col-md-6 order-md-1 text-center mt-4 mt-md-0" data-aos="fade-right" data-aos-delay="300">
           <img src="assets/img/step2.png" alt="Step 2" class="img-fluid rounded-4">
         </div>
       </div>
 
       <!-- Step 3 -->
       <div class="row align-items-center mb-5">
-        <div class="col-md-6">
+        <div class="col-12 col-md-6">
           <h3 class="how-title fs-2 fw-bold" data-aos="fade-right" data-aos-delay="100">3. Настраиваешь алерты</h3>
           <p class="how-text" data-aos="fade-right" data-aos-delay="200">Не пропускай важные события — настрой
             уведомления:</p>
@@ -295,11 +324,11 @@
             </div>
           </div>
         </div>
-
-        <div class="col-md-6 text-center" data-aos="fade-left" data-aos-delay="300">
+        <div class="col-12 col-md-6 text-center mt-4 mt-md-0" data-aos="fade-left" data-aos-delay="300">
           <img src="assets/img/step3.png" alt="Step 3" class="img-fluid rounded-4">
         </div>
       </div>
+
     </div>
   </section>
 
@@ -317,7 +346,7 @@
           <div class="result-card h-100">
             <div class="exchange-label text-accent">Ethereum (ETH)</div>
             <div class="period-label text-white-50">За сегодня</div>
-            <div class="profit-value text-success fw-bold fs-3">+$812.34</div>
+            <div class="profit-value text-success fw-bold fs-4 fs-lg-3" id="stats-eth">+$812.34</div>
             <div class="small text-white-50 mt-3">
               Транзакций: <span class="text-white">224</span><br>
               Прибыльных: <span class="text-white">91%</span>
@@ -330,7 +359,7 @@
           <div class="result-card h-100">
             <div class="exchange-label text-accent">Bitcoin (BTC)</div>
             <div class="period-label text-white-50">За неделю</div>
-            <div class="profit-value text-success fw-bold fs-3">+$6,542.10</div>
+            <div class="profit-value text-success fw-bold fs-4 fs-lg-3" id="stats-btc">+$6,542.10</div>
             <div class="small text-white-50 mt-3">
               Транзакций: <span class="text-white">1,417</span><br>
               Прибыльных: <span class="text-white">88%</span>
@@ -343,7 +372,7 @@
           <div class="result-card h-100">
             <div class="exchange-label text-accent">Toncoin (TON)</div>
             <div class="period-label text-white-50">За месяц</div>
-            <div class="profit-value text-success fw-bold fs-3">+$12,039.90</div>
+            <div class="profit-value text-success fw-bold fs-4 fs-lg-3" id="stats-ton">+$12,039.90</div>
             <div class="small text-white-50 mt-3">
               Транзакций: <span class="text-white">4,208</span><br>
               Прибыльных: <span class="text-white">86%</span>
@@ -702,16 +731,58 @@
 
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="limitedOfferModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-white border border-accent rounded-4 overflow-hidden shadow-lg">
+        <div class="modal-body p-0 d-md-flex align-items-stretch">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          <!-- Ілюстрація -->
+          <div class="d-block " style="flex: 1;">
+            <img src="assets/img/modal-bg.png" alt="TokenTracker ZIP"
+              class="img-fluid h-100 object-fit-cover rounded-start">
+          </div>
+
+          <!-- Контент -->
+          <div class="p-4 d-flex flex-column justify-content-between" style="flex: 1.2;">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="fw-bold text-white mb-0">🚀 Бета-доступ TokenTracker</h5>
+
+              </div>
+
+              <p class="text-white-50 small mb-3">
+                Сейчас идёт <span class="text-accent fw-semibold">бета-тест</span> нашей крипто-разведки. Только для
+                участников — ZIP-архив с полной версией:
+                тулза, конфиги, инструкция. Потом будет платно.
+              </p>
+
+              <div class="limited-offer-box  d-flex align-items-center justify-content-center p-3 mb-3">
+                <span class="text-accent fs-4 fw-bold" id="modal-timer">10:00</span>
+              </div>
+            </div>
+
+            <a href="#download-option" class="hero__btn btn btn-primary">Скачать <b>TokenTracker</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 
   <div class="download-alerts-wrapper" id="download-alerts"></div>
-
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
   <!-- Перед </body> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+
     AOS.init({
       once: false, // анімація тільки один раз
       duration: 800, // тривалість
@@ -797,8 +868,173 @@
       const random = alerts[Math.floor(Math.random() * alerts.length)];
       showDownloadAlert(random);
     }, 8000); // кожні 8 секунд
-  </script>
 
+    //скролл шапки 
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    //анимация цифр 
+    let statsPlayed = false;
+
+    window.addEventListener('scroll', () => {
+      const triggerBlock = document.querySelector('.results-stats');
+      if (!triggerBlock || statsPlayed) return;
+
+      const triggerPos = triggerBlock.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (triggerPos < windowHeight - 100) {
+        statsPlayed = true;
+
+        const counters = [
+          { id: 'stats-eth', end: 812.34 },
+          { id: 'stats-btc', end: 6542.10 },
+          { id: 'stats-ton', end: 12039.90 },
+        ];
+
+        counters.forEach(({ id, end }) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+
+          const counter = new countUp.CountUp(id, end, {
+            duration: 6,
+            separator: ' ',
+            decimalPlaces: 2,
+            prefix: '+$'
+          });
+
+          if (!counter.error) {
+            counter.start();
+          } else {
+            console.error(counter.error);
+          }
+        });
+      }
+    });
+    function animateVisibleCountUps() {
+      const elements = document.querySelectorAll('.count-up');
+
+      elements.forEach((el) => {
+        const valueStr = el.getAttribute('data-count')?.replace(/[^0-9.]/g, '');
+        const value = parseFloat(valueStr);
+
+        if (isNaN(value)) return;
+
+        const elPosition = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elPosition < windowHeight - 100 && !el.classList.contains('played')) {
+          el.classList.add('played');
+
+          const count2 = new countUp.CountUp(el, value, {
+            duration: 4,
+            separator: ',',
+          });
+
+          if (!count2.error) {
+            count2.start();
+          } else {
+            console.error(count2.error);
+          }
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateVisibleCountUps);
+    window.addEventListener('load', animateVisibleCountUps); // для елементів одразу у viewport
+    //паралакс від миші
+    document.addEventListener("mousemove", (e) => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const offsetX = e.clientX - centerX;
+      const offsetY = e.clientY - centerY;
+
+      document.querySelectorAll(".parallax").forEach((el) => {
+        const speed = parseFloat(el.dataset.speed);
+        const x = -(offsetX * speed) / 200;
+        const y = -(offsetY * speed) / 200;
+        el.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+
+
+  </script>
+  <script>
+    function startModalTimer(duration, display) {
+      let timer = duration, minutes, seconds;
+      const interval = setInterval(() => {
+        minutes = String(Math.floor(timer / 60)).padStart(2, '0');
+        seconds = String(timer % 60).padStart(2, '0');
+        display.textContent = `${minutes}:${seconds}`;
+        if (--timer < 0) {
+          clearInterval(interval);
+          display.textContent = "00:00";
+        }
+      }, 1000);
+    }
+
+    let modalShown = false;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const modalEl = document.getElementById('limitedOfferModal');
+      const modal = new bootstrap.Modal(modalEl);
+
+      // ⏱ Перше відкриття через 30 сек
+      setTimeout(() => {
+        modal.show();
+        const display = document.getElementById('modal-timer');
+        startModalTimer(600, display);
+      }, 10000);
+
+      // 🎯 При закритті — запланувати повторне відкриття через 2 хв
+      modalEl.addEventListener('hidden.bs.modal', () => {
+        setTimeout(() => {
+          modal.show();
+          const display = document.getElementById('modal-timer');
+          startModalTimer(600, display);
+        }, 30000); // 2 хвилини
+      });
+    });
+
+    // 🧠 Приклад функції зворотного відліку (залиши свій, якщо вже є)
+    function startModalTimer(seconds, display) {
+      let remaining = seconds;
+      const interval = setInterval(() => {
+        const minutes = Math.floor(remaining / 60);
+        const secs = remaining % 60;
+        display.textContent = `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        if (--remaining < 0) clearInterval(interval);
+      }, 1000);
+    }
+
+
+    document.querySelectorAll('#mobileMenu a.nav-link, #mobileMenu a.btn').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          e.preventDefault();
+          const offcanvasEl = document.getElementById('mobileMenu');
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+          if (bsOffcanvas) bsOffcanvas.hide();
+
+          setTimeout(() => {
+            // Видалення backdrop вручну
+            document.querySelectorAll('.offcanvas-backdrop.show').forEach(el => el.remove());
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 350);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
