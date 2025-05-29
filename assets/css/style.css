@@ -665,7 +665,7 @@ h2 {
 
 .testimonials-slider::before {
   content: '';
-  background: linear-gradient(180deg, rgb(6 13 21) 10%, rgba(237, 221, 83, 0) 100%);
+  background: linear-gradient(180deg, rgb(6 12 21) 10%, rgba(237, 221, 83, 0) 100%);
   top: 0;
   left: 0;
   width: 100%;
