@@ -288,15 +288,13 @@ body {
 }
 
 .features::before {
-  content: "";
+  content: '';
+  background: linear-gradient(180deg, rgb(9 32 59) 10%, rgb(7 14 24) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0px;
-  left: -50px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(ellipse at center, rgba(145, 255, 97, 0.05), transparent 70%);
-  z-index: 0;
-  pointer-events: none;
 }
 
 .features::after {
@@ -369,6 +367,17 @@ body {
 /* ---- trusted ---- */
 .trusted-by {
   background-color: #09213c;
+  position: relative;
+}
+
+.trusted-by:before {
+  content: '';
+  background: linear-gradient(180deg, rgb(7 14 24) 10%, rgb(6 12 21) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 
@@ -439,15 +448,13 @@ body {
 }
 
 .audience-clean::before {
-     content: "";
+    content: '';
+    background: linear-gradient(180deg, rgb(6 13 22) 10%, rgb(9 33 60) 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: -50px;
-    left: 150px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(ellipse at center, rgba(145, 255, 97, 0.05), transparent 70%);
-    z-index: 0;
-    pointer-events: none;
 }
 
 .audience-clean::after {
@@ -747,7 +754,7 @@ h2 {
 }
 .security-ui::before {
   content: '';
-  background: linear-gradient(180deg, rgb(7 13 23) 50%, rgba(9, 33, 60, 1) 100%);
+  background: linear-gradient(180deg, rgb(9 31 57) 50%, rgba(9, 33, 60, 1) 100%);
   top: 0;
   left: 0;
   width: 100%;
@@ -814,31 +821,49 @@ h2 {
 .download-options {
   background-color: rgba(9, 33, 60, 1);
   position: relative;
+  overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.download-options .row > * {
+  margin-top: 0;
 }
 
 .download-options::after {
-      content: "";
-    position: absolute;
-    top: 0px;
-    left: -50px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(ellipse at center, rgba(145, 255, 97, 0.05), transparent 70%);
-    z-index: 0;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse at center, rgba(145, 255, 97, 0.05), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
 }
-.download-card {
+
+.download-wrapper {
+  
   background-color: #0b111d;
   border-radius: 1rem;
-  padding: 2rem;
-  text-align: center;
+  padding: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 25px rgba(145, 255, 97, 0.05);
   position: relative;
-  transition: transform 0.2s ease;
+  z-index: 1;
 }
-.download-card:hover {
-  transform: translateY(-4px);
+
+.download-options h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.hero__highlight {
+  color: #91ff61;
+}
+
+.download-content img {
+  display: block;
 }
 
 .file-box {
@@ -846,6 +871,7 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .btn-accent {
@@ -853,35 +879,32 @@ h2 {
   color: #000;
   font-weight: 600;
   border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  animation: pulse-glow 1.2s infinite ease-in-out;
 }
+
 .btn-accent:hover {
   background-color: #7fe955;
   color: #000;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 12px rgba(145, 255, 97, 0.3);
 }
 
-.btn-outline-accent {
-  border: 1px solid #91ff61;
-  color: #91ff61;
-  background: transparent;
-  font-weight: 600;
-}
-.btn-outline-accent:hover {
-  background-color: #91ff61;
-  color: #000;
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0px rgba(145, 255, 97, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(145, 255, 97, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(145, 255, 97, 0.2);
+  }
 }
 
-.recommended-label {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #91ff61;
-  color: #000;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-}
 
 
 /* ---- faq ---- */
