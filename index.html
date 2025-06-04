@@ -20,17 +20,22 @@
 <body>
   <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header border-bottom border-secondary">
-      <h5 class="offcanvas-title">Меню</h5>
+      <div class="header__logo-wrapper d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="TokenTracker Logo" class="header__logo">
+      </div>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column gap-3 px-4">
-      <a href="#start" class="header__link nav-link text-white" data-bs-dismiss="offcanvas"
+      <a href="#hero" class="header__link nav-link text-white" data-bs-dismiss="offcanvas"
         aria-label="Начать">Начать</a>
-      <a href="#features" class="header__link nav-link text-white" data-bs-dismiss="offcanvas"
-        aria-label="Функции">Функции</a>
       <a href="#how-it-works" class="header__link nav-link text-white" data-bs-dismiss="offcanvas" aria-label="Как это работает
         ?">Как это работает
         ?</a>
+      <a href="#features" class="header__link nav-link text-white" data-bs-dismiss="offcanvas"
+        aria-label="Функции">Функции</a>
+      <a href="#security" class="header__link nav-link text-white" data-bs-dismiss="offcanvas"
+        aria-label="Безопасность">Безопасность</a>
+      <a href="#faq" class="header__link nav-link text-white" data-bs-dismiss="offcanvas" aria-label="FAQ">FAQ</a>
       <hr class="text-white-50">
       <a href="#download-option" class="header__cta btn btn-success w-100" data-bs-dismiss="offcanvas" aria-label="Начать
         мониторинг">Начать
@@ -41,7 +46,7 @@
   <header class="header">
     <div class="container">
       <div class="row align-items-center py-3">
-        <div class="col-6 col-sm-4 col-md-2">
+        <div class="col-4 col-sm-4 col-md-2">
           <div class="header__logo-wrapper d-flex align-items-center">
             <img src="assets/img/logo.png" alt="TokenTracker Logo" class="header__logo">
           </div>
@@ -49,18 +54,19 @@
 
         <div class="col-md-6 col-lg-7 d-none d-lg-flex justify-content-center">
           <nav class="header__nav d-flex gap-4">
-            <a href="#start" class="header__link nav-link" aria-label="Начать">Начать</a>
-            <a href="#features" class="header__link nav-link" aria-label="Функции">Функции</a>
+            <a href="#hero" class="header__link nav-link" aria-label="Начать">Начать</a>
             <a href="#how-it-works" class="header__link nav-link" aria-label="Как это работает ?">Как это работает ?</a>
+            <a href="#features" class="header__link nav-link" aria-label="Функции">Функции</a>
+            <a href="#security" class="header__link nav-link" aria-label="Безопасность">Безопасность</a>
+            <a href="#faq" class="header__link nav-link" aria-label="FAQ">FAQ</a>
           </nav>
         </div>
-        <div class="col-md-4 col-lg-3 col-sm-5 d-sm-flex justify-content-end text-end d-none d-md-block ms-auto">
-          <a href="#download-option" class="header__cta btn btn-primary btn-sm" aria-label="Начать мониторинг">Начать
+        <div class="col-8 col-md-10 col-lg-3 ms-xs-auto  d-flex align-items-center  justify-content-end">
+          <a href="#download-option" class="header__cta btn btn-primary btn-sm d-none d-md-block"
+            aria-label="Начать мониторинг">Начать
             мониторинг</a>
-        </div>
-        <div class="col-2 col-lg-3 ms-auto d-lg-none d-flex justify-content-end">
-          <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
-            aria-label="Бургер меню" aria-controls="mobileMenu">
+          <button class="btn text-white d-flex d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-label="Бургер меню" aria-controls="mobileMenu">
             <i class="bi bi-list" style="font-size: 1.8rem;"></i>
           </button>
         </div>
@@ -130,6 +136,12 @@
           <p class="how-text" data-aos="fade-right" data-aos-delay="200">Или выбираешь из популярных — всё быстро и
             просто.</p>
           <div class="d-flex flex-wrap gap-3 mt-4">
+            <div class="token-icon" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/crypto/btc.png" alt="USDT" class="img-token">
+            </div>
+            <div class="token-icon" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/crypto/polygon.png" alt="USDT" class="img-token">
+            </div>
             <div class="token-icon" data-aos="zoom-in" data-aos-delay="300">
               <img src="assets/img/crypto/usdt.png" alt="USDT" class="img-token">
             </div>
@@ -409,33 +421,35 @@
     <div class="container text-center" data-aos="fade-up">
       <div class="trusted-by__marquee">
         <div class="trusted-by__track">
-          <img src="assets/img/parther/cointelegraph.png" alt="Cointelegraph">
-          <img src="assets/img/parther/forbes.png" alt="Forbes">
-          <img src="assets/img/parther/coindesk.png" alt="CoinDesk">
-          <img src="assets/img/parther/bloomberg.png" alt="Bloomberg">
-          <img src="assets/img/parther/yahoo.png" alt="Yahoo">
-          <img src="assets/img/parther/okx.png" alt="OKX">
-          <img src="assets/img/parther/benzinga.png" alt="Benzinga">
-          <img src="assets/img/parther/theblock.png" alt="The Block">
-          <img src="assets/img/parther/bitcoin-com.png" alt="Gemini">
+          <img src="assets/img/parther/1.png" alt="Cointelegraph">
+          <img src="assets/img/parther/2.png" alt="Forbes">
+          <img src="assets/img/parther/3.png" alt="CoinDesk">
+          <img src="assets/img/parther/4.png" alt="Bloomberg">
+          <img src="assets/img/parther/5.png" alt="Yahoo">
+          <img src="assets/img/parther/6.png" alt="OKX">
+          <img src="assets/img/parther/7.png" alt="Benzinga">
+          <img src="assets/img/parther/8.png" alt="The Block">
+          <img src="assets/img/parther/9.png" alt="Gemini">
+          <img src="assets/img/parther/10.png" alt="Gemini2">
 
           <!-- Дублікат для безперервності -->
-          <img src="assets/img/parther/cointelegraph.png" alt="Cointelegraph">
-          <img src="assets/img/parther/forbes.png" alt="Forbes">
-          <img src="assets/img/parther/coindesk.png" alt="CoinDesk">
-          <img src="assets/img/parther/bloomberg.png" alt="Bloomberg">
-          <img src="assets/img/parther/yahoo.png" alt="Yahoo">
-          <img src="assets/img/parther/okx.png" alt="OKX">
-          <img src="assets/img/parther/benzinga.png" alt="Benzinga">
-          <img src="assets/img/parther/theblock.png" alt="The Block">
-          <img src="assets/img/parther/bitcoin-com.png" alt="Gemini">
+          <img src="assets/img/parther/1.png" alt="Cointelegraph">
+          <img src="assets/img/parther/2.png" alt="Forbes">
+          <img src="assets/img/parther/3.png" alt="CoinDesk">
+          <img src="assets/img/parther/4.png" alt="Bloomberg">
+          <img src="assets/img/parther/5.png" alt="Yahoo">
+          <img src="assets/img/parther/6.png" alt="OKX">
+          <img src="assets/img/parther/7.png" alt="Benzinga">
+          <img src="assets/img/parther/8.png" alt="The Block">
+          <img src="assets/img/parther/9.png" alt="Gemini">
+          <img src="assets/img/parther/10.png" alt="Gemini2">
         </div>
       </div>
     </div>
   </section>
 
 
-  <section class="section testimonials-slider py-5">
+  <!-- <section class="section testimonials-slider py-5">
     <div class="container text-center">
       <h2 class="text-white fw-bold mb-3" data-aos="fade-up" data-aos-delay="100">Что говорят пользователи</h2>
       <p class="text-white-50 mb-4" data-aos="fade-up" data-aos-delay="200">
@@ -444,7 +458,6 @@
 
       <div class="swiper testimonialsSwiper" data-aos="zoom-in" data-aos-delay="300">
         <div class="swiper-wrapper">
-          <!-- Відгук 1 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="d-flex align-items-center mb-2">
@@ -459,8 +472,6 @@
               </p>
             </div>
           </div>
-
-          <!-- Відгук 2 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="d-flex align-items-center mb-2">
@@ -475,8 +486,6 @@
               </p>
             </div>
           </div>
-
-          <!-- Відгук 3 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="d-flex align-items-center mb-2">
@@ -491,8 +500,6 @@
               </p>
             </div>
           </div>
-
-          <!-- Відгук 4 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="d-flex align-items-center mb-2">
@@ -507,8 +514,6 @@
               </p>
             </div>
           </div>
-
-          <!-- Відгук 5 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="d-flex align-items-center mb-2">
@@ -524,12 +529,10 @@
             </div>
           </div>
         </div>
-
-        <!-- Навігація -->
         <div class="swiper-pagination mt-4"></div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -554,7 +557,7 @@
   </section> -->
 
 
-  <section class="security-ui py-5">
+  <section id="security" class="security-ui py-5">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-6 mb-4 mb-lg-0">
@@ -585,7 +588,7 @@
     <div class="container">
       <div class="download-wrapper row align-items-center g-4" data-aos="fade-up" data-aos-delay="100">
         <!-- Левая часть -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-2 order-lg-1">
           <h2 class="fw-bold mb-3 text-white">
             Скачать <span class="hero__highlight">TokenTracker</span>
           </h2>
@@ -599,7 +602,7 @@
         </div>
 
         <!-- Правая часть -->
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-6 order-1 order-lg-2 text-center mb-5">
           <img src="assets/img/download.png" alt="TokenTracker Preview" class="img-fluid rounded shadow">
         </div>
       </div>
@@ -610,7 +613,7 @@
 
 
 
-  <section class="section faq-block py-5">
+  <section id="faq" class="section faq-block py-5">
     <div class="container">
       <h2 class="text-white fw-bold text-center mb-4" data-aos="fade-up" data-aos-delay="100">
         Часто задаваемые вопросы
