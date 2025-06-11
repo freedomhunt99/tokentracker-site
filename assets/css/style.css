@@ -500,10 +500,12 @@ h2 {
   border-radius: 12px;
   transition: background 0.3s ease;
   width: 100%;
+  position: relative;
 }
 
 .audience-clean__item:hover {
   background: rgba(145, 255, 97, 0.05);
+  transform: scale(1.1) !important;
 }
 
 .audience-clean__icon {
@@ -589,7 +591,8 @@ h2 {
 }
 
 .how-it-works img {
-  max-width: 80%;
+  max-width: 100%;
+  width: 100%;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(145, 255, 97, 0.08);
   box-shadow: none;
@@ -983,6 +986,55 @@ h2 {
 }
 
 
+/* ---- Contact Block ---- */
+.contact-block {
+  background: radial-gradient(circle at top left, #0f0f0f, #060d1a);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.contact-block::before {
+  content: '';
+  background: linear-gradient(180deg, #0a0f17 0%, #0b0f17 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact-block .container {
+  z-index: 2;
+  position: relative;
+}
+
+.contact-form {
+  background-color: #0b111d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 25px rgba(145, 255, 97, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #101922;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6e7e91;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #91ff61;
+  box-shadow: 0 0 10px rgba(145, 255, 97, 0.2);
+  background-color: #101922;
+  color: #fff;
+}
+
 
 /* ---- footer ---- */
 .footer {
@@ -1070,6 +1122,9 @@ h2 {
   background: #91ff61;
   margin-right: 8px;
 }
+
+
+
 
 @keyframes fadeInUp {
   to {
