@@ -166,6 +166,11 @@ body {
   color: #fff !important;
 }
 
+.hero__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
 .hero__btn.btn-primary {
   background-color: #91ff61;
@@ -174,7 +179,6 @@ body {
   padding: 12px 28px;
   border: none;
   border-radius: 8px;
-  margin-right: 12px;
   transition: all 0.3s ease;
   
 }
@@ -382,6 +386,12 @@ body {
   position: absolute;
 }
 
+.trusted-by__title {
+      font-size: 2rem;
+    font-weight: 700;
+    color: #91ff61;
+    margin-bottom: 1rem;
+}
 
 .trusted-by__marquee {
   overflow: hidden;
@@ -859,6 +869,14 @@ h2 {
   z-index: 1;
 }
 
+.download-wrapper .btn-accent b {
+  color: #7228ff;
+}
+
+.download-wrapper .btn-accent span {
+  font-weight: bold;
+}
+
 .download-options h2 {
   font-size: 2rem;
   color: #fff;
@@ -1209,6 +1227,9 @@ h2 {
   .hero__image img {
     max-width: 80%;
   }
+  .hero__subtext-small {
+    text-align: center;
+  }
   .audience-clean__left,
   .audience-clean__right {
     max-width: 100%;
@@ -1333,7 +1354,7 @@ h2 {
     flex-direction: column !important;
   }
   .modal-content .modal-body {
-    padding: 1rem !important;
+    /* padding: 1rem !important; */
   }
   .screenshots {
     overflow: hidden;
